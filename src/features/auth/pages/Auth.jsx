@@ -79,7 +79,16 @@ const AuthCard = ({
                 </div>
 
                 <div className="space-y-2">
-                    <Label>Password</Label>
+                    <div className="flex items-center">
+                        <Label>Password</Label>
+                        {
+                            authType === "login" &&
+                            <a className="ml-auto text-sm hover:underline" href="#">
+                                Forgot your password?
+                            </a>
+                        }
+
+                    </div>
                     <Input
                         type="password"
                         placeholder="Enter your password"
